@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tree animation</title>
+</head>
+<body>
+
+  <script>
+    setTimeout(function() {
+      var originalAlert = window.alert;
+      window.alert = function(message) {
+        var alertBox = document.createElement('div');
+        alertBox.textContent = message;
+        alertBox.classList.add('custom-alert');
+        document.body.appendChild(alertBox);
+        setTimeout(function() {
+          alertBox.style.display = 'none';
+        }, 3000);
+      };
+      alert("ini adalah popup alert");
+    }, 3000);
+  </script>
+
+    <section>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> 
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+
+    <div class="night">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+
+    <canvas role="img" aria-label="A tree growing until it bears fruit, dropping its fruit, shrinking, and repeating the cycle"></canvas>
+    <script src="script.js"></script>
+
+    <footer>
+		<p>&copy; copyright </p>
+	</footer>
+
+</body>
+</html
